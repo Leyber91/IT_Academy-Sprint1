@@ -3,20 +3,25 @@ const exerciseSection = document.createElement('div')
 const displayer = document.querySelector('.displayer')
 const exerciseStatement = document.createElement('p')
 const header = document.createElement('h2')
-header.textContent= 'Tasca 4';
+header.textContent= 'Tasca 3';
 displayer.appendChild(header);
 
 
 // EXERCISE 1 CODE
-const exerciseSection1 = document.createElement('div')
+
 let btnEx1 = document.createElement('button')
 btnEx1.className = 'exercise1'
 btnEx1.textContent = 'Exercise 1: Luis'
-
 //DEFINE FUNCTION
-let exercise1 = (a, b) => exerciseSection1.textContent = a + b
-exercise1(2,3)
-
+let exercise1 = function(user) {
+    console.log(`Your username is ${user}`)
+}
+let username1 = 'Leyber91'
+let username2 = 'Leyber212'
+let username3 = 'Leyber42'
+btnEx1.addEventListener('dblclick', exercise1(username1))
+btnEx1.addEventListener('click', exercise1(username2))
+btnEx1.addEventListener('mouseOn', exercise1(username3))
 //DEFINE EXERCISE 1 TITLE AND STATEMENT
 let Ex1Title = document.createElement('h2')
 Ex1Title.className = 'title'
@@ -27,7 +32,7 @@ Ex1Statement.textContent = `Crea un array amb el teu nom on cada posició corres
 //APPEND EXERCISE 1 FUNCTION
 displayer.appendChild(Ex1Title)
 displayer.appendChild(Ex1Statement)
-displayer.appendChild(exerciseSection1)
+displayer.appendChild(btnEx1)
 
 
 // EXERCISE 2 CODE

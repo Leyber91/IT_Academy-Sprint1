@@ -269,11 +269,7 @@ async function await6 (){
   }
 }
 
-
-
 await6()
-
-
 
 }
 
